@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gamer sign-up form</title>
+</head>
+
+<body>
+    <span id="hex"></span>
+    <div class="container">
+        <div class="flex">
+            <div class="left">
+                <div class="logo-flex"><img src="./images/favicon-32x32.png" alt="">
+                    <h3>NEONCORE</h3>
+                </div>
+                <h1><span id="green">//</span> Join the nexus</h1>
+                <h6>Initialize your NEONCORE identity</h6>
+                <span class="line"></span>
+                <div class="Operator-id">
+                    <h6>Operator ID</h6>
+                    <h6 id="ready-count">0/5 ready</h6>
+                </div>
+                <h3 id="operator-name">Unassigned</h3>
+                <ul class="status-list">
+                    <li class="status-item">
+                        <span class="status-label">Callsign</span>
+                        <span class="status-line"></span>
+                        <span class="status-value" id="callsign-status">Pending</span>
+                    </li>
+                    <li class="status-item">
+                        <span class="status-label">Email</span>
+                        <span class="status-line"></span>
+                        <span class="status-value" id="email-status">Pending</span>
+                    </li>
+                    <li class="status-item">
+                        <span class="status-label">Password</span>
+                        <span class="status-line"></span>
+                        <span class="status-value" id="passwordStatus">Pending</span>
+                    </li>
+                    <li class="status-item">
+                        <span class="status-label">Confirm</span>
+                        <span class="status-line"></span>
+                        <span class="status-value" id="confirm-status">Pending</span>
+                    </li>
+                    <li class="status-item">
+                        <span class="status-label">Terms</span>
+                        <span class="status-line"></span>
+                        <span class="status-value" id="terms-status">Required</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="upper">
+                    <span id="upper-title"> New operator
+                    </span><span id="upper-note">All fields required</span>
+                </div>
+                <form action="" novalidate>
+                    <span class="line"></span>
+                    <div class="contat-card">
+                        <div class="Callsign"><span class="green">></span> <label for="Callsign"><span
+                                    class="title">Callsign</span></label>
+                            <input type="text" placeholder="e.g. Vortex_07" id="Callsign">
+                            <p class="error-msg" id="callsign-error"></p>
+                            <span class="instructions">3–20 characters: letters, numbers, _ or -</span>
+                        </div>
+                        <div class="Callsign"><span class="green">></span> <label for="email"><span
+                                    class="title">Email</span></label>
+                            <input type="email" placeholder="you@example.com" id="email">
+                            <p class="error-msg" id="email-error"></p>
+                        </div>
+                        <div class="contat-card">
+                            <div class="Callsign"><span class="green">></span> <label for="Password"><span
+                                        class="title">Password</span></label>
+                                <div class="pos-eye">
+                                    <input type="Password" id="Password">
+                                    <img src="./images/icon-eye.svg" alt="eye" class="eye" id="eye1">
+                                    <img src="./images/icon-eye-off.svg" alt="eye" class="eye-close" id="eyeClose1">
+                                </div>
+                                <div class="strength-bar">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <p class="error-msg" id="Password-error"></p>
+                                <span class="instructions">At least 8 characters</span>
+                            </div>
+                        </div>
+                        <div class="contat-card">
+                            <div class="Callsign"><span class="green">></span> <label for="confirm-password"><span
+                                        class="title">Confirm password</span></label>
+                                <div class="pos-eye">
+                                    <input type="Password" id="confirm-password">
+                                    <img src="./images/icon-eye.svg" alt="eye" class="eye" id="eye2">
+                                    <img src="./images/icon-eye-off.svg" alt="eye" class="eye-close" id="eyeClose2">
+                                </div>
+                                <p class="error-msg" id="confirm-password-error"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" required id="checkbox">
+                        <img src="./images/icon-tick-20.svg" alt="" id="true">
+                        <p>I accept the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
+                    </div>
+                    <p class="error-msg" id="checkbox-error"></p>
+                    <input type="submit" value="Initialize account" id="submit">
+                </form>
+                <div class="under">
+                    <p>Already an operator? <a href="#" id="link">Log in</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="action.js"></script>
+</body>
+
+</html>
